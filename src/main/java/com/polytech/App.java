@@ -22,5 +22,18 @@ public class App
                 .setNecessiteProjecteur(true)
                 .build();
         System.out.println(cours1.getMatiere());
+
+
+        GestionnaireEmploiDuTemps gestionnaire = new GestionnaireEmploiDuTemps();
+
+        Etudiant etudiant1 = new Etudiant("Alice");
+        Responsable responsable = new Responsable("M. Martin");
+
+        gestionnaire.attach(etudiant1);
+        gestionnaire.attach(responsable);
+
+
+        gestionnaire.ajouterCours(cours1);
+
     }
 }
