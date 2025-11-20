@@ -11,6 +11,8 @@ public class App
     public static void main( String[] args )
     {
 
+
+        System.out.println("==========exercice 1==========");
         Cours cours1 = new CoursBuilder()
                 .setMatiere("Génie Logiciel")
                 .setEnseignant("Dr. Dupont")
@@ -21,9 +23,9 @@ public class App
                 .setNiveau("Master")
                 .setNecessiteProjecteur(true)
                 .build();
-        System.out.println(cours1.getMatiere());
+        System.out.println(cours1.getDescription());
 
-
+        System.out.println("==========exercice 2==========");
         GestionnaireEmploiDuTemps gestionnaire = new GestionnaireEmploiDuTemps();
 
         Etudiant etudiant1 = new Etudiant("Alice");
@@ -34,6 +36,12 @@ public class App
 
 
         gestionnaire.ajouterCours(cours1);
+
+
+        System.out.println("==========exercice 3==========");
+        ICours coursComplet = new CoursEnAnglais(new CoursEnLigne(cours1));
+        System.out.println(coursComplet.getDescription());
+
 
     }
 }
